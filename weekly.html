@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Weather Report</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+  <div class="container">
+    <div class=" col-sm-12 weekly">
+      <h3><strong>Weekly Weather</strong></h3>
+    </div>
+    <div class="container col-sm-8 list-group weatherInfo">
+      <div class=" col-xs-3 list-group-item ">
+        <ul class="list-unstyled">
+          <li class=" text-primary"><strong>THURS</strong></li>
+          <li><img src="img/rain.png" class="img-responsive"></li>
+          <li class="h4">28<sup>o</sup>c</li>
+          <li class="h4">Rain</li>
+        </ul>
+      </div>
+      <div class=" col-xs-3 list-group-item  ">
+        <ul class="list-unstyled">
+          <li class="text-primary"><strong>FRI</strong></li>
+          <li><img src="img/cstrom.png" class="img-responsive"></li>
+          <li class="h4">28<sup>o</sup>c</li>
+          <li class="h4">Cloudy</li>
+        </ul>
+      </div>
+      <div class="col-xs-3 list-group-item ">
+        <ul class="list-unstyled">
+          <li class=" text-primary"><strong>SAT</strong></li>
+          <li><img src="img/sun.png" class="img-responsive"></li>
+          <li class="h4">28<sup>o</sup>c</li>
+          <li class="h4">Sunny</li>
+        </ul>
+      </div>
+      <div class="col-xs-3 list-group-item ">
+        <ul class="list-unstyled">
+          <li class=" text-primary"><strong>SUN</strong></li>
+          <li><img src="img/rain.png" class="img-responsive"></li>
+          <li class="h4">28<sup>o</sup>c</li>
+          <li class="h4">Rain</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container">
+    <div class="pics">
+      <div class="col-sm-12 pics_header">
+        <h3><strong>World Weather Gallery</strong></h3>
+      </div>
+      <div class="col-sm-12">
+        <p>Last updated <b>29 July 17</b> Sat 13:29</p>
+        <hr>
+      </div>
+      
+    </div>
+    <div class="col-sm-12">
+      <div id="section1">
+       <h1>Weather News Gallery</h1>
+       <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner container">
+          <div class="item active">
+           <img class="img img-rounded container" src="img/features1.jpg" alt="features1" width="auto">
+           <p class="h3 text-center">An aeroplane flies near a rainbow on its way to Heathrow Airport in London, UK, on 23 July.</p>
+         </div>
+         <div class="item">
+           <img class="img img-rounded container" src="img/features2.jpg" alt="features2" width="auto">
+           <p class="h3 text-center">A farmer walks through a rice field that is parched due to the long dry season in Banda.</p> 
+         </div>
+         <div class="item">
+           <img class="img img-rounded container" src="img/features3.jpg" alt="features3" width="auto">
+           <p class="h3 text-center">Lightning flashes across the night sky over a marina in Brighton, UK. Photo taken on 19 July.</p>
+         </div>
+         <div class="item">
+           <img class="img img-rounded container" src="img/features4.jpg" alt="features4" width="auto">
+           <p class="h3 text-center">Cars are submerged in a flooded street after torrential rain in Istanbul, Turkey, on 18 July.</p>  
+         </div>
+       </div>
+
+       <!-- Left and right controls -->
+       <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+</div>
+</div>
+<hr>
+</body>
+</html>

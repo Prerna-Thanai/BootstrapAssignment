@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Weather Report</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <div class="container">
+    <nav class=" container navbar navbar-default navbar-fixed-top">
+
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><img src="img/bbc.png" width="100px" height="30px"></a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+          <li><a href="weekly.html">Weekly</a></li>
+          <li><a href="weekly.html">News</a></li>
+          <li><a href="https://www.accuweather.com/en/videos/">Videos</a></li>
+          <li><a href="https://www.skymetweather.com/insat/weather-satellite-images-of-india/01-00">Live Report</a></li>
+        </ul>
+        <div class="col-sm-3 col-md-3">
+         <form class="navbar-form" role="search">
+           <div class="input-group">
+             <input type="text" class="form-control" placeholder="Search" name="q">
+             <div class="input-group-btn">
+               <button class="btn btn-default" id="icon" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+             </div>
+           </div>
+         </form>
+       </div>
+       <ul class="nav navbar-nav navbar-right">          <li><a style="cursor:pointer" onclick="openNav()" >Subscribe</a> </li>
+       </ul>
+     </div>
+   </nav>
+ </div>
+
+ <div id="mySidenav" class="sidenav col-sm-6">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <p class="text-center text-uppercase font-weight-bold container h1 col-sm-12 ">Subscribe<br> Here</p>
+  <form>
+    <div class="container col-sm-8">
+      <input type="text" class="form-control">
+    </div>
+    <div class="container col-sm-4">
+      <input type="submit" class="btn-primary btn" value="Subscribe">
+    </div>
+  </form> 
+</div>
+
+<div class="container">
+  <div class="jumbotron weather_search">
+    <div class="col-sm-12">
+
+      <h3>Find the forecast</h3>
+      <label for="location">Enter the city</label>
+      <input id="location" name="location" />
+      <button type="button" class="btn btn-success">Search</button>
+    </div>
+    
+
+    <div class="container col-sm-8 list-group weatherInfo">
+      <div class=" col-xs-3 list-group-item ">
+        <ul class="list-unstyled">
+          <li class=" text-primary"><strong>CURR</strong></li>
+          <li><img src="img/rain.png" class="img-responsive"></li>
+          <li class="h4">28<sup>o</sup>c</li>
+          <li class="h4">Rain</li>
+        </ul>
+      </div>
+      <div class=" col-xs-3 list-group-item  ">
+        <ul class="list-unstyled">
+          <li class="text-primary"><strong>TOD</strong></li>
+          <li><img src="img/cstrom.png" class="img-responsive"></li>
+          <li class="h4">28<sup>o</sup>c</li>
+          <li class="h4">Cloudy</li>
+        </ul>
+      </div>
+      <div class="col-xs-3 list-group-item ">
+        <ul class="list-unstyled">
+          <li class=" text-primary"><strong>TON</strong></li>
+          <li><img src="img/sun.png" class="img-responsive"></li>
+          <li class="h4">28<sup>o</sup>c</li>
+          <li class="h4">Sunny</li>
+        </ul>
+      </div>
+      <div class="col-xs-3 list-group-item ">
+        <ul class="list-unstyled">
+          <li class=" text-primary"><strong>TOMM</strong></li>
+          <li><img src="img/rain.png" class="img-responsive"></li>
+          <li class="h4">28<sup>o</sup>c</li>
+          <li class="h4">Rain</li>
+        </ul>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="col-sm-12">
+    <p><a href="weekly.html">Check weekly weather</a></p>
+  </div>
+
+  <div class="map">
+    <div class="col-sm-12">
+      <h2>Today's India Weather</h2>
+    </div>
+    <div class="col-sm-12">
+      <img class="img-responsive" src="img/weathermap.png">
+    </div>
+  </div>
+
+  <div class="col-sm-4">
+    <div class="info">
+      <h2>Delhi</h2>
+      <img src="img/cloudy.jpg">
+      <p>Temprature:93</p>
+      <p>Humidity:30%</p>
+      <p>Precipitation:0%</p>
+    </div>
+  </div>
+
+
+
+
+  <div class="col-sm-4">
+    <div class="info">
+      <h2>Kolkata</h2>
+      <img src="img/rain.jpg">
+      <p>Temprature:91</p>
+      <p>Humidity:20%</p>
+      <p>Precipitation:40%</p>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="info">
+      <h2>Chennai</h2>
+      <img src="img/sunny.jpg">
+      <p>Temprature:92</p>
+      <p>Humidity:48%</p>
+      <p>Precipitation:3%</p>
+    </div>
+  </div>
+  
+  <div class="news">
+    <div class="col-sm-12">
+      <h2>Features and Analysis</h2>
+    </div>
+    <div class="col-sm-4">
+      <img src="img/news1.jpg">
+      <h3><a href="http://www.bbc.com/weather/features/40870357">Weather for the weak ahead</a></h3>
+      <p>There's a real contrast in our weather over the coming days, with rain on offer for some and sunshine for others. </p>
+    </div>
+    <div class="col-sm-3">
+      <img src="img/news6.jpg">
+      <h3><a href="http://www.bbc.com/news/world-asia-40871854">North Korea threats unsettle Guam islanders</a></h3>
+      <p>North Korea claims it has missiles capable of reaching the US mainland, but its latest threat is against Guam, a much closer target.</p>
+    </div>
+
+
+    <div class="col-sm-2">
+      <img src="img/news2.jpg">
+      <h3><a href="http://www.bbc.com/weather/features/40866161">Europe heat update</a></h3>
+      <p>Still hot for southeastern parts of Europe, Louise Lear has the latest details.</p>
+    </div>
+    <div class="col-sm-2">
+      <img src="img/news3.jpg">
+      <h3><a href="http://www.bbc.com/news/uk-england-bristol-40861465">Rare 'pink rainbow' spotted in sky</a></h3>
+      <p>The optical illusion is caused by a regular rainbow and a sunset happening at the same time.</p>
+    </div>
+  </div>
+
+</div>
+<div class="container">
+  <div class="jumbotron">
+    <div class="col-sm-2">
+      <h3>In pictures</h3>
+    </div>
+
+    <div class="col-sm-2">
+      <a href="weekly.html"><img src="img/pic1.jpg"></a>
+    </div>
+
+    <div class="col-sm-2">
+      <a href="weekly.html"><img src="img/pic2.jpg"></a>
+    </div>
+
+    <div class="col-sm-2">
+      <a href="weekly.html"><img src="img/pic3.jpg"></a>
+    </div>
+
+    <div class="col-sm-2">
+      <a href="weekly.html"><img src="img/pic4.jpg"></a>
+    </div>
+
+    <div class="col-sm-2">
+      <a href="weekly.html"><img src="img/pic5.jpg"></a>
+    </div>
+  </div>
+  <footer>
+    <div class="container">
+
+      <div class="col-sm-4">
+        <img src="img/bbc.png">
+      </div>
+      <div class="col-sm-4">
+        <p><a href="#">Mobile Site</a></p>
+        <p><a href="#">Advertise with us</a></p>
+        <p><a href="#">Ad choices</a></p>
+      </div>
+
+      <div class="col-sm-4">
+        <p><a href="#">Terms of use</a></p>
+        <p><a href="#">Privacy</a></p>
+        <p><a href="#">Cookies</a></p>
+      </div>
+    </div>
+  </footer>
+
+</div>
+<script>
+$(document).ready(function(){
+  $('[data-toggle="popover"]').popover(); 
+});
+function openNav() {
+  document.getElementById("mySidenav").style.width = "50%";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+</div>
+</body>
+</html>
